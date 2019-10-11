@@ -1,0 +1,598 @@
+<div class="container">
+    <form [formGroup]="formA" >
+        <div class="row">
+            <div class="col-sm-4 mt-2">
+                <span><strong>Sở GDĐT: </strong>
+                    <input type="text" id="fname"  formControlName="soGDDT"></span>
+                    <div class="mt-2" *ngIf="(soGDDT.invalid && (soGDDT.dirty || soGDDT.touched))" data-qe-id="errorName">
+                        <span class="redstar">
+                            *
+                        </span>
+                      </div>
+            </div>
+            <div class="col-sm-2">
+                <span><strong>Mã Sở: </strong>
+                    <input type="text"  class="facility" formControlName="facilityCode1">
+                    <input type="text"  class="facility" formControlName="facilityCode2">
+                </span>
+            </div>
+            <div class="col-sm-6 mt-3 ">
+                <strong style="font-size: 18px">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</strong>
+                <br>
+                <strong class="ml-5"><u>ĐỘC LẬP - TỰ DO - HẠNH PHÚC</u></strong>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2" id="billNumber">
+                <Strong>Phiếu số 1</Strong>
+                <p>Lưu tại nơi nhận ĐKDT</p>
+            </div>
+            <div class="col-sm-6">
+    
+            </div>
+            <div class="col-sm-3">
+                <div id="billnb">
+                    <span>Số Phiếu: <input id="fillBill"></span>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center ; font-size: 16px ">
+            <Strong>PHIẾU ĐĂNG KÝ DỰ THI THPT QUỐC GIA</Strong>
+        </div>
+        <div style="text-align: center; font-size: 16px">
+            <strong> VÀ XÉT TUYỂN VÀO ĐẠI HỌC, CAO ĐẲNG, TRUNG CẤP </strong>
+        </div>
+        <div class="personInfo mt-4" id="PersonInfo">
+            <header>
+                <h6>A. THÔNG TIN CÁ NHÂN</h6>
+            </header>
+            <div>
+                <Strong> 1. Họ, chữ đệm và tên của thí sinh</Strong> (Viết đúng như giấy khai sinh bằng chữ in hoa có dấu)
+            </div>
+            <div class="row">
+                <div class="col-sm-1">
+    
+                </div>
+                <div class="col-sm-5">
+                    <input class="inputBottomdotted" id="nameA">
+                </div>
+                <div class="col-sm-2">
+    
+                </div>
+                <div class="col-sm-4">
+                    <Strong>Giới tính: </Strong>(Nữ ghi 1, Nam ghi 0) <input type="text" class="facility" id="genderId">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5">
+                    <Strong> 2. Ngày, tháng và 2 số cuối của năm sinh</Strong>
+                    <p>(Nếu ngày và tháng nhỏ hơn 10 thì ghi số 0 ở ô đầu)</p>
+                </div>
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-1">
+                    <span>
+                        <input type="text" class="input1slot" id="day1">
+                        <input type="text" class="input1slot" id="day2">
+                    </span>
+                    <div class=" ml-2">Ngày</div>
+                </div>
+                <div class="col-sm-1">
+                    <span>
+                        <input type="text" class="input1slot" id="mon1">
+                        <input type="text" class="input1slot" id="mon2">
+                    </span>
+                    <div class=" ml-2">Tháng</div>
+                </div>
+                <div class="col-sm-1">
+                    <span>
+                        <input type="text" class="input1slot" id="year1">
+                        <input type="text" class="input1slot" id="year2">
+                    </span>
+                    <div class=" ml-2">Năm</div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-sm-6">
+                    <strong>3. a) Nơi sinh</strong>(tỉnh hoặc thành phố):
+                    <input class="inputBottomdotted" id="cityBorn">
+                </div>
+                <div class="col-sm-6">
+                    <span><strong>b) Dân tộc</strong>(Chọn dân tộc):
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option selected>Kinh</option>
+                            <option value="1">Dao</option>
+                            <option value="1">Thái</option>
+                            <option value="3">Mông</option>
+                            <option value="3">Mèo</option>
+                            <option value="1">Mường</option>
+                            <option value="2">Tày</option>
+                        </select>
+                    </span>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-sm-6">
+                    <strong> 4. Số chứng minh nhân dân/Thẻ căn cước công dân</strong> (Ghi mỗi chữ số vào một ô nếu là chứng minh thư điền 3 số 0 vào 3 ô đầu tiên)
+                </div>
+                <div>
+                    <input type="text" class="inputIdentify" id="identi1">
+                    <input type="text" class="inputIdentify" id="identi2">
+                    <input type="text" class="inputIdentify" id="identi3">
+                    <input type="text" class="inputIdentify" id="identi4">
+                    <input type="text" class="inputIdentify" id="identi5">
+                    <input type="text" class="inputIdentify" id="identi6">
+                    <input type="text" class="inputIdentify" id="identi7">
+                    <input type="text" class="inputIdentify" id="identi8">
+                    <input type="text" class="inputIdentify" id="identi9">
+                    <input type="text" class="inputIdentify" id="identi10">
+                    <input type="text" class="inputIdentify" id="identi11">
+                    <input type="text" class="inputIdentify" id="identi12">
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-sm-2">
+                    <strong> 5. Hộ khẩu thường trú: </strong>
+                </div>
+                <div class="col-sm-2">
+                    <span>
+                        <input type="text" class="input1slot" id="city1">
+                        <input type="text" class="input1slot" id="city2">
+                    </span>
+                    <div class=" ml-2">Mã tỉnh(TP)</div>
+                </div>
+                <div class="col-sm-2">
+                    <span>
+                        <input type="text" class="input1slot" id="district1">
+                        <input type="text" class="input1slot" id="district2">
+                    </span>
+                    <div class=" ml-2"> Mã huyện (quận) </div>
+                </div>
+                <div class="col-sm-2">
+                    <span>
+                        <input type="text" class="input1slot" id="commune1">
+                        <input type="text" class="input1slot" id="commune2">
+                    </span>
+                    <div class=" ml-2">Mã xã (phường)</div>
+                </div>
+                <div class="col-sm-4">
+                    <p>Ghi rõ tên tỉnh (Thành phố), tên huyện (quận), tên xã (phường) vào dòng trống dưới đây</p>
+                </div>
+            </div>
+            <div class="mt-2">
+                <input class="inputBottomdotted" id="address">
+            </div>
+            <div class="row mt-3">
+                <div class="col-sm-6 flexIt">
+    
+                    <p>Hộ khẩu thường trú trên 18 tháng tại khu vực 1: </p>
+                    <input type="radio" class="radioButton" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+    
+                </div>
+                <div class="col-sm-6 flexIt">
+    
+                    <p>Hộ khẩu thường trú trên 18 tháng tại xã đặc biệt khó khăn: </p>
+                    <input type="radio" class="radioButton" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+    
+                </div>
+            </div>
+            <div>
+                <strong>6. Nơi học THPT hoặc tương đương</strong> (ghi tên trường và nơi trường đóng: huyện (quận), tỉnh
+                (thành phố),
+                và ghi mã tỉnh, mã trường);
+            </div>
+            <div class="row mt-2">
+                <div class="col-sm-1">
+    
+                </div>
+                <div class="col-sm-6 ">
+                    <strong>Năm lớp 10:</strong>
+                    <input class="inputBottomdottedShort" id="grade10">
+                </div>
+                <div class="col-sm-1 mt-2">
+                    <input type="text" class="input1slot" id="city1InGrade10">
+                    <input type="text" class="input1slot" id="city2InGrade10">
+    
+                </div>
+                <div class="col-sm-4 mt-2">
+                    <input type="text" class="input1slot" id="schoolCode1InGrade10">
+                    <input type="text" class="input1slot" id="schoolCode2InGrade10">
+                    <input type="text" class="input1slot" id="schoolCode3InGrade10">
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-sm-1">
+    
+                </div>
+                <div class="col-sm-6">
+                    <strong>Năm lớp 11:</strong>
+                    <input class="inputBottomdottedShort" id="grade11">
+                </div>
+                <div class="col-sm-1 mt-2">
+                    <input type="text" class="input1slot" id="city1InGrade11">
+                    <input type="text" class="input1slot" id="city2InGrade11">
+                </div>
+                <div class="col-sm-4 mt-2">
+                    <input type="text" class="input1slot" id="schoolCode1InGrade11">
+                    <input type="text" class="input1slot" id="schoolCode2InGrade11">
+                    <input type="text" class="input1slot" id="schoolCode3InGrade11">
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-sm-1">
+    
+                </div>
+                <div class="col-sm-6">
+                    <strong>Năm lớp 12:</strong>
+                    <input class="inputBottomdottedShort" id="grade12">
+                </div>
+                <div class="col-sm-1 mt-2">
+                    <input type="text" class="input1slot" id="city1InGrade12">
+                    <input type="text" class="input1slot" id="city2InGrade12">
+                    <div class=" ml-2">Mã tỉnh</div>
+                </div>
+                <div class="col-sm-4 mt-2">
+                    <input type="text" class="input1slot" id="schoolCode1InGrade12">
+                    <input type="text" class="input1slot" id="schoolCode2InGrade12">
+                    <input type="text" class="input1slot" id="schoolCode3InGrade12">
+                    <div class=" ml-2">Mã trường</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-6">
+                    <strong>Tên lớp 12:</strong>
+                    <input class="inputBottomdottedShort" id="grade12">
+                </div>
+            </div>
+    
+            <div class="row mt-5">
+                <div class="col-sm-6">
+                    <strong>7. Điện thoại :</strong>
+                    <input class="inputBottomdottedShort">
+                </div>
+                <div class="col-sm-5">
+                    <strong> Email :</strong>
+                    <input class="inputBottomdottedShort">
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-sm-12">
+                    <strong>8. Địa chỉ liên hệ:</strong>
+                    <input class="inputBottomdottedShort">
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="Sign-Up-Info mt-4" id="SignUpInfo">
+        <header>
+            <h6>B. THÔNG TIN ĐĂNG KÝ THI</h6>
+        </header>
+        <div class="mt-3">
+            <Strong> 9. Thí sinh dùng kết quả thi để xét tuyển sinh ĐH, CĐ, TC </Strong>
+            <input type="checkbox" class="checkBoxButton" name="checkXT" value="cosettuyen">
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-6">
+                <strong>10. Thí sinh học chương trình THPT </strong>
+                <input type="radio" class="radioButton" name="learnInThpt">
+            </div>
+            <div class="col-sm-6">
+                <strong>Thí sinh học chương trình GDTX </strong>
+                <input type="radio" class="radioButton" name="learnInThpt">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-6">
+                <strong>11. Thí sinh tự do chưa tốt nghiệp THPT </strong>
+                <input type="radio" class="radioButton" name="graduated">
+            </div>
+            <div class="col-sm-6">
+                <strong>Thí sinh tự do đã tốt nghiệp THPT </strong>
+                <input type="radio" class="radioButton" name="graduated">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-8">
+                <strong>12. Dự thi tại cụm: </strong>(Tên cụm):
+                <input class="inputBottomdottedShort" style="width: 65%">
+            </div>
+            <div class="col-sm-4">
+                <strong>Mã cụm: </strong>
+                <input type="text" class="input1slot">
+                <input type="text" class="input1slot">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-8">
+                <strong>13. Nơi ĐKDT: </strong>
+                <input class="inputBottomdottedShort">
+            </div>
+            <div class="col-sm-4">
+                <strong>Đơn vị nơi ĐKDT: </strong>
+                <input type="text" class="input1slot">
+                <input type="text" class="input1slot">
+                <input type="text" class="input1slot">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-12 ">
+                <strong>14. Đăng ký bài thi/môn thi</strong>(Thí sinh đăng ký dự thi môn gì thì tích vào ô bài thì tướng
+                ứng
+                với môn đó, riêng với bài thi Ngoại ngữ,thí sinh phải điền vào ô trống tương ứng với ngôn ngữ lựa chọn
+                cụ thể như sau:
+                N1: tiếng Anh, N2: tiếng Nga, N3: tiếng Pháp, N4: tiếng Trung, N5: tiếng Đức, N6: tiếng Nhật).
+            </div>
+        </div>
+        <div class="mt-2 ml-5">
+            <header>
+                <strong>a) Đăng ký bài thi</strong>
+            </header>
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-1">
+            </div>
+            <div class="col-sm-1 mt-2">
+                Toán
+                <input type="checkbox" class="checkBoxButton" name="checkMonThi">
+            </div>
+            <div class="col-sm-2 mt-2" style="text-align: center">
+                Ngữ Văn
+                <input type="checkbox" class="checkBoxButton" name="checkMonThi">
+            </div>
+            <div class="col-sm-3">
+                Ngoại Ngữ
+                <select class="custom-select selectLanguage" id="inputGroupSelect02">
+                    <option value="english">Tiếng Anh</option>
+                    <option value="russian">Tiếng Nga</option>
+                    <option value="french">Tiếng Pháp</option>
+                    <option value="chinese">Tiếng Trung</option>
+                    <option value="german">Tiếng Đức</option>
+                    <option value="japanese">Tiếng Nhật</option>
+                </select>
+            </div>
+            <div class="col-sm-2 mt-2">
+                KHTN
+                <input type="checkbox" class="checkBoxButton" name="checkMonThi">
+            </div>
+            <div class="col-sm-2 mt-2">
+                KHXH
+                <input type="checkbox" class="checkBoxButton" name="checkMonThi">
+            </div>
+        </div>
+        <div class="mt-2 ml-5">
+            <header>
+                <strong>b) Đăng ký môn thi thành phần trong bài thi tổ hợp </strong>(chỉ dành cho thí sinh tự do
+                không chọn dự thi toàn bài thi tổ hợp)
+            </header>
+        </div>
+        <div class="row">
+            <div class="col-sm-1 mt-2">
+            </div>
+            <div class="col-sm-1 mt-2">
+                Vật lý
+                <input type="checkbox" class="checkBoxButton" name="checkMonThiTrongTohop">
+            </div>
+            <div class="col-sm-2 mt-2" style="text-align: center">
+                Hóa học
+                <input type="checkbox" class="checkBoxButton" name="checkMonThiTrongTohop">
+            </div>
+            <div class="col-sm-2 mt-2" style="text-align: center">
+                Sinh học
+                <input type="checkbox" class="checkBoxButton" name="checkMonThiTrongTohop">
+            </div>
+            <div class="col-sm-2 mt-2" style="text-align: center">
+                Lịch sử
+                <input type="checkbox" class="checkBoxButton" name="checkMonThiTrongTohop">
+            </div>
+            <div class="col-sm-2 mt-2 " style="text-align: center">
+                Địa lý
+                <input type="checkbox" class="checkBoxButton" name="checkMonThiTrongTohop">
+            </div>
+            <div class="col-sm-2 mt-2">
+                GDCD
+                <input type="checkbox" class="checkBoxButton" name="checkMonThiTrongTohop">
+            </div>
+        </div>
+    </div>
+    <div class="Sign-Up-Info mt-4" id="SignUpInfo">
+        <header class="flexIt">
+            <h6 id="mucC">C. THÔNG TIN ĐỂ XÉT CÔNG NHẬN TỐT NGHIỆP THPT</h6> (Thí sinh dự thi chỉ để lấy kết quả xét
+            tuyển vào ĐH, CĐ, TC
+            thì bỏ qua phần này)
+        </header>
+        <div class="mt-3">
+            <strong>15. Đăng ký miễn thi ngoại ngữ</strong>(thí sinh ghi loại chứng chỉ ngoại ngữ đủ điều kiện theo quy
+            định hoặc
+            ghi rõ là thành viên trong đội tuyển dự thi Olympic quốc tế môn Ngoại Ngữ để được miễn thi):
+            <input class="inputBottomdottedShort" style="width: 70%">
+            <div class="ml-5 mt-2">
+                <strong>Điểm Thi</strong>(nếu Chứng chỉ có điểm thi thì điền vào ô này)
+                <input class="inputPoint">
+            </div>
+        </div>
+        <div class="mt-3">
+            <strong>16. Đăng ký bài/môn thi xin bảo lưu</strong>(Thí sinh ghi rõ điểm bài/môn thi xin bảo lưu vào ô
+            tương ứng):
+        </div>
+        <div class="row mt-3">
+
+            <div class="col-sm-2 textCenter">
+                Toán
+                <input class="inputPoint">
+            </div>
+            <div class="col-sm-2 textCenter">
+                Ngữ văn
+                <input class="inputPoint">
+            </div>
+            <div class="col-sm-2 textCenter">
+                Lịch sử
+                <input class="inputPoint">
+            </div>
+            <div class="col-sm-2 textCenter">
+                Địa lí
+                <input class="inputPoint textCenter">
+            </div>
+            <div class="col-sm-2 textCenter">
+                GDCD
+                <input class="inputPoint">
+            </div>
+        </div>
+        <div class="row mt-3">
+
+            <div class="col-sm-2 textCenter">
+                Vật lý
+                <input class="inputPoint">
+            </div>
+            <div class="col-sm-2 textCenter">
+                Hóa học
+                <input class="inputPoint">
+            </div>
+            <div class="col-sm-2 textCenter">
+                Sinh học
+                <input class="inputPoint">
+            </div>
+            <div class="col-sm-2 textCenter">
+                Ngoại ngữ
+                <input class="inputPoint textCenter">
+            </div>
+        </div>
+    </div>
+    <div class="Sign-Up-Info mt-4" id="SignUpInfo">
+        <header>
+            <h6 id="mucC">D. THÔNG TIN ĐỂ XÉT TUYỂN SINH VÀO ĐẠI HỌC, CAO ĐẲNG, TRUNG CẤP</h6>
+            (Thí sinh dự thi chỉ để xét công nhận tốt nghiệp thì không phải điền vào phần này)
+        </header>
+        <div class="row mt-3">
+            <div class="col-sm-9 pt-2">
+                <strong>17. Đối tượng ưu tiên tuyển sinh:</strong>(chọn đối tượng ưu tiên được hưởng 01, 02, 03, 04, 05,
+                06, 07)
+            </div>
+            <div class="col-sm-1">
+                <select class="custom-select selectLanguage" style="width: 70px;" id="inputGroupSelect03">
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-sm-8 ml-5">
+                Ghi ký hiệu ở 2 ô bên phải, nếu không phải đối tượng được ưu tiên thì để trống:
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="input1slot">
+                <input type="text" class="input1slot">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-sm-10 pt-3">
+                <strong>18. Khu vực tuyển sinh: </strong>thuộc khu vực nào thì chọn ký hiệu của khu vực đó:
+                KV1,KV2-NT,KV2,KV3
+            </div>
+            <div class="col-sm-2">
+                <select class="custom-select selectLanguage" style="width: 70px;" id="inputGroupSelect03">
+                    <option value="KV1">KV1</option>
+                    <option value="KV2-NT">KV2-NT</option>
+                    <option value="KV2">KV2</option>
+                    <option value="KV3">KV3</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-sm-9 pl-3">
+                sau đó ghi mã khu vực ( 1-KV1, 2NT-KV2, 2-KV2 , 3-KV3 ) vào ô trống
+            </div>
+            <div class="col-sm-2">
+                <input class="inputPoint">
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-sm-10">
+                <strong>19. Năm tốt nghiệp THPT hoặc tương đương:</strong>(ghi đủ 4 số của năm vào ô)
+            </div>
+            <div class="col-sm-2">
+                <input class="input1slot">
+                <input class="input1slot">
+                <input class="input1slot">
+                <input class="input1slot">
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-sm-6">
+                <strong>19. Đối với thí sinh dự thi để xét tuyển liên thông ĐH, CĐ:</strong>
+            </div>
+            <div class="col-sm-3">
+                <strong>Đã tốt nghiệp TC</strong>
+                <input type="checkbox" class="checkBoxButton" name="totnghiepTC">
+            </div>
+            <div class="col-sm-3">
+                <strong>Đã tốt nghiệp CĐ</strong>
+                <input type="checkbox" class="checkBoxButton" name="totnghiepTCĐ">
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-sm-12">
+                <strong>21. Thí sinh đăng ký nguyện vọng xét tuyển sinh đại học, cao đẳng, trung cấp</strong>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-11">
+                <p>-<strong>Các nguyện vọng</strong> xếp theo thứ tự ưu tiên từ trên xuống dưới
+                    (nguyện vọng 1 là nguyện vọng ưu tiên cao nhất) </p>
+                <p>- thí sinh đăng ký nguyện vọng nào không đúng với quy định của các trường thì nguyện vọng đó sẽ không
+                    được nhập
+                    vào hệ thống phần mềm để trường xét tuyển
+                </p>
+                <p>
+                    Tổng số nguyện vọng (bắt buộc phải điền)
+                    <input class="inputPoint">
+                </p>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-sm-12">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="stt">Thứ tự nguyện vọng ưu tiên</th>
+                            <th scope="col">Mã Trường (chữ in hoa)</th>
+                            <th scope="col">Mã Ngành/ Nhóm ngành</th>
+                            <th scope="col">Tên Ngành/ Nhóm ngành</th>
+                            <th scope="col">Mã tổ hợp môn xét tuyển</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
