@@ -29,3 +29,7 @@
     height: 420px;
     overflow: scroll;
 }
+.po-fixed{
+    position: -webkit-sticky;
+  position: sticky;
+}

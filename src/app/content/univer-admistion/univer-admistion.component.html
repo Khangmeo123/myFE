@@ -5,7 +5,7 @@
         <button class="btn btn-outline-primary mt-2" id="search">Tìm kiếm</button>
     </div>
     <div class="row">
-        <div class="col-sm-3">
+        <div class="col-sm-3 colSort">
             <strong>Sắp xếp theo mã trường</strong>
             <br>
             <select name="sort" id="sortName" class="mt-2">
@@ -16,12 +16,22 @@
             <br>
             <button class="btn btn-outline-primary mt-2" id="sort">Sắp xếp</button>
         </div>
-        <div class="col-sm-4">
-            <div data-spy="scroll" id="scroll">
-                <ul>
-                    <li *ngFor="let uni of univers; let i = index">{{  uni.name }}</li>
-                </ul>
-            </div>
+        <div class="col-sm-5" id="scroll">
+            <table class="table table-bordered" >
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col" class="stt">Mã trường</th>
+                        <th scope="col">Tên trường Cao Đẳng - Đại Học</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let univer of univers">
+                        <th scope="row">{{ univer.code }}</th>
+                        <td> {{ univer.name }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
         </div>
 
         <div class="col-sm-4">

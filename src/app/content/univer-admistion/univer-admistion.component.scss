@@ -11,8 +11,9 @@
     opacity: 0.7;
 }
 #scroll{
+    background-color: #ffffff;
     width: 100%;
-    max-height: 300px;
+    max-height: 490px;
     border: 2px solid #e6e4df;
     overflow: scroll;
 }
@@ -44,4 +45,8 @@
     border: 1px solid #e6e4df;
     padding-left: 10px;
     border-radius: 7px;
+}
+.colSort{
+    margin-top: 100px;
+    padding-left: 40px;
 }
