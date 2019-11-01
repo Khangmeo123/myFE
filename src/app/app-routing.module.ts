@@ -4,13 +4,25 @@ import { PersonalComponent } from './content/personal/personal.component';
 import { RegisterComponent } from './content/register/register.component';
 import { UniverAdmistionComponent } from './content/univer-admistion/univer-admistion.component';
 import { UniversityDetailComponent } from './content/university-detail/university-detail.component';
+import { LoginPageComponent } from './content/login-page/login-page.component';
+import { SignUpPageComponent } from './content/sign-up-page/sign-up-page.component';
 
-
+import { AuthGuard } from './_guards';
 const routes: Routes = [
   {path: 'personal', component: PersonalComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'univer-admistion', component:UniverAdmistionComponent},
-  { path: 'university-detail',component: UniversityDetailComponent }
+  { path: 'university-detail',component: UniversityDetailComponent },
+  {path: 'login-page',component:LoginPageComponent},
+  {path: 'sign-up-page',component:SignUpPageComponent},
+  {path: 'register',component:RegisterComponent},
+//   {
+//     path: '',
+//     component: PersonalComponent,
+//     canActivate: [AuthGuard]
+// },
+// otherwise redirect to home
+{ path: '**', redirectTo: '' }
 ];
 
 @NgModule({

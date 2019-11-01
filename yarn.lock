@@ -649,6 +649,11 @@ amdefine@>=0.0.4:
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
   integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
 
+angular-font-awesome@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/angular-font-awesome/-/angular-font-awesome-3.1.2.tgz#9378732612d8e8c71e0d7c2faa0faddc7f858ec9"
+  integrity sha1-k3hzJhLY6MceDXwvqg+t3H+Fjsk=
+
 ansi-colors@4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-4.1.1.tgz#cbb9ae256bf750af1eab344f229aa27fe94ba348"

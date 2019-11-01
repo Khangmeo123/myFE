@@ -1,0 +1,50 @@
+<div class="container-fluid" id="background">
+    <br><br><br><br><br><br>
+    <div class="row">
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-4 login" >
+            <form [formGroup]="profile" (ngSubmit)="onSubmit()" id="menu-login">
+                    <div class="form-group">
+                            <label for="exampleInputName1">Tên đầy đủ</label>
+                            <input type="email" class="form-control" formControlName="fullName" id="exampleInputName1"
+                                aria-describedby="emailHelp" placeholder="Enter name">
+                            <small class="mt-2 errors" *ngIf="(fullName.invalid && (fullName.dirty || fullName.touched))" data-qe-id="errorfullName">
+                                "{{ fullName.errors.invalidUsername }}" bạn cần nhập tên đầy đủ
+                            </small>
+                        </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email</label>
+                    <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" placeholder="Enter email">
+                    <small class="mt-2 errors" *ngIf="(email.invalid && (email.dirty || email.touched))" data-qe-id="erroremail">
+                        "{{ email.errors.invalidUsername }}"
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Mật khẩu</label>
+                    <input type="password" class="form-control" formControlName="password" id="exampleInputPassword1"
+                        placeholder="Password">
+                    <small class="mt-2 errors" *ngIf="(password.invalid && (password.dirty || password.touched))"
+                        data-qe-id="errorpassword">
+                        Bạn cần nhập password
+                </small>
+                </div>
+                <div class="form-group">
+                        <label for="exampleInputPassword1">Nhập lại mật khẩu</label>
+                        <input type="password" class="form-control" formControlName="repassword" id="exampleInputPassword2"
+                            placeholder="Password">
+                        <small class="mt-2 errors" *ngIf="(repassword.invalid && (repassword.dirty || repassword.touched))"
+                            data-qe-id="errorrepassword">
+                            Bạn cần nhập password giống nhau!
+                </small>
+                    </div>
+                <button type="submit" class="btn btn-primary">Đăng ký</button>
+            </form>
+        </div>
+        <div class="col-sm-4">
+
+        </div>
+    </div>
+</div>

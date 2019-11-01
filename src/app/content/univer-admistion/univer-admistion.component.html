@@ -1,14 +1,31 @@
-<div class="container">
+<div class="container-fluid">
+    <div class="mt-2 mb-2">
+        <Label>Tìm kiếm trường:</Label>
+        <input type="text" placeholder="nhập tên trường" id="inputSearchSchool">
+        <button class="btn btn-outline-primary mt-2" id="search">Tìm kiếm</button>
+    </div>
     <div class="row">
-        <div class="col-sm-8">
-            <div>
-                <!-- <ul *ngFor="let univer of universitys; let i = index">
-                    <li>{{ i  univer }}</li>
-                </ul> -->
-            </div>
+        <div class="col-sm-3">
+            <strong>Sắp xếp theo mã trường</strong>
+            <br>
+            <select name="sort" id="sortName" class="mt-2">
+                <option selected>--Sắp xếp trường--</option>
+                <option value="asc">Sắp xếp từ A -> Z</option>
+                <option value="desc">Sắp xếp từ Z -> A</option>
+            </select>
+            <br>
+            <button class="btn btn-outline-primary mt-2" id="sort">Sắp xếp</button>
         </div>
         <div class="col-sm-4">
-            
+            <div data-spy="scroll" id="scroll">
+                <ul>
+                    <li *ngFor="let uni of univers; let i = index">{{  uni.name }}</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+
         </div>
     </div>
 </div>

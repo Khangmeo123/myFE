@@ -1,1 +1,55 @@
-<p>university-detail works!</p>
+<div class="container-fluid">
+    <div class="name-univer">
+        Thông tin trường
+    </div>
+    <div class="row mt-2 pl-3">
+        <div class="col-sm-4 info-univer">
+            Mã trường: {{ univer.code }}
+        </div>
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-4 info-univer">
+            website: <a href="https://`{{ univer.website }}`" style=" color: black">{{ univer.website }} <i
+                    class="fa fa-external-link ml-1 mt-1"></i></a>
+        </div>
+    </div>
+    <div class="mt-2 info-univer">
+        Tên trường: {{ univer.name }}
+    </div>
+    <div class="mt-2 info-univer">
+        Địa chỉ: {{ univer.address }}
+    </div>
+    <div class="cacnganh">
+        Các ngành tuyển sinh trong trường
+    </div>
+    <div class="row mt-2 block-major">
+        <div class="col-sm-12">
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col" class="stt">STT</th>
+                        <th scope="col">Mã ngành</th>
+                        <th scope="col">Tên ngành</th>
+                        <th scope="col">Tổ hợp môn</th>
+                        <th scope="col">Điểm chuẩn</th>
+                        <th scope="col">ghi chú</th>
+                        <th scope="col"> act </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let major of majors">
+                        <th scope="row">{{ major.id }}</th>
+                        <td> {{ major.majorCode}}</td>
+                        <td> {{major.majorName}} </td>
+                        <td>{{major.khoi}}</td>
+                        <td>{{major.diemchuan}}</td>
+                        <td>{{major.note}}</td>
+                        <td></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
