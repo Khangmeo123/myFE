@@ -8,6 +8,8 @@ import { LoginPageComponent } from './content/login-page/login-page.component';
 import { SignUpPageComponent } from './content/sign-up-page/sign-up-page.component';
 
 import { AuthGuard } from './_guards';
+import { BenchmarkComponent } from './content/benchmark/benchmark.component';
+import { MajorComponent } from './content/major/major.component';
 const routes: Routes = [
   {path: 'personal', component: PersonalComponent},
   {path: 'register', component: RegisterComponent},
@@ -16,6 +18,8 @@ const routes: Routes = [
   {path: 'login-page',component:LoginPageComponent},
   {path: 'sign-up-page',component:SignUpPageComponent},
   {path: 'register',component:RegisterComponent},
+  { path: 'benchmark',component:BenchmarkComponent },
+  { path: 'majors',component:MajorComponent },
 //   {
 //     path: '',
 //     component: PersonalComponent,

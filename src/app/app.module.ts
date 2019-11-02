@@ -20,6 +20,8 @@ import { SidebarComponent } from './template/sidebar/sidebar.component'
 import { JwtInterceptor, ErrorInterceptor, fakeBackendProvider } from './_helpers';
 import { HomeComponent } from './content/home/home.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { MajorComponent } from './content/major/major.component';
+import { BenchmarkComponent } from './content/benchmark/benchmark.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +34,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     SignUpPageComponent,
     SidebarComponent,
     HomeComponent,
+    MajorComponent,
+    BenchmarkComponent,
   ],
   imports: [
     BrowserModule,
