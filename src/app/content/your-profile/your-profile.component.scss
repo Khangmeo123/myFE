@@ -1,0 +1,39 @@
+.container-fluid{
+    padding: 0 !important;
+}
+.title{
+    height: 40px;
+    font-size: 20px;
+    padding-top: 5px;
+    text-align: center;
+    background-color: #99e6ff;
+    font-weight: bold;
+}
+.image{
+    margin-left: 90px;
+    width: 200px;
+    height: 300px;
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+.lable1{
+    margin-left: 30%;
+    font-size: 16px;
+    width: 65%;
+    padding-left: 8px;
+    padding-top: 7px;
+    height: 40px;
+    border: 0.5px solid blue;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.lable2{
+    font-size: 16px;
+    width: 95%;
+    padding-left: 8px;
+    padding-top: 7px;
+    height: 40px;
+    border: 0.5px solid blue;
+    margin-top: 20px;
+    border-radius: 5px;
+}

@@ -22,6 +22,7 @@ import { HomeComponent } from './content/home/home.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { MajorComponent } from './content/major/major.component';
 import { BenchmarkComponent } from './content/benchmark/benchmark.component';
+import { YourProfileComponent } from './content/your-profile/your-profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +37,7 @@ import { BenchmarkComponent } from './content/benchmark/benchmark.component';
     HomeComponent,
     MajorComponent,
     BenchmarkComponent,
+    YourProfileComponent
   ],
   imports: [
     BrowserModule,

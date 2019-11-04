@@ -10,6 +10,8 @@ import { SignUpPageComponent } from './content/sign-up-page/sign-up-page.compone
 import { AuthGuard } from './_guards';
 import { BenchmarkComponent } from './content/benchmark/benchmark.component';
 import { MajorComponent } from './content/major/major.component';
+import { HomeComponent } from './content/home/home.component';
+import { YourProfileComponent } from './content/your-profile/your-profile.component';
 const routes: Routes = [
   {path: 'personal', component: PersonalComponent},
   {path: 'register', component: RegisterComponent},
@@ -20,6 +22,8 @@ const routes: Routes = [
   {path: 'register',component:RegisterComponent},
   { path: 'benchmark',component:BenchmarkComponent },
   { path: 'majors',component:MajorComponent },
+  { path:'home',component:HomeComponent },
+  { path:'your-profile',component: YourProfileComponent },
 //   {
 //     path: '',
 //     component: PersonalComponent,
